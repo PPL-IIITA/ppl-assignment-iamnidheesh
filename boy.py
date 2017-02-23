@@ -41,8 +41,8 @@ class Boy:
 
 		'changes status of a girl'
 		
-		if(self.status == 's')
+		if(self.status == 's') :
 			self.status = 'c'
-		else
+		else :
 			self.status = 's'
 			

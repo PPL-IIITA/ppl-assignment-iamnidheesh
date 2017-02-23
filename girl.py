@@ -23,7 +23,7 @@ class Girl:
 			print(self.name + " will not date " + self.name)
 			return 0
 
-		else
+		else :
 
 			return 1
 
@@ -37,7 +37,7 @@ class Girl:
 
 		'changes status of a girl'
 		
-		if(self.status == 's')
+		if(self.status == 's') :
 			self.status = 'c'
-		else
+		else :
 			self.status = 's'
