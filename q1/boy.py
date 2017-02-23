@@ -3,7 +3,6 @@ class Boy:
 	'defines a Boy'
 
 	boy_number = 0
-	status = 's'
 
 	def __init__(self,name,attr_rating,budget,intel_level,attr_requirement):
 
@@ -11,23 +10,30 @@ class Boy:
 
 		self.name = name
 		self.attr_rating = attr_rating
-		self.budget  =budget
+		self.budget  = budget
 		self.intel_level = intel_level
 		self.attr_requirement = attr_requirement
+		self.status = 's'
+		self.gfname = ''
 
 	def isElligible(self,girl):
 
 		'test if a girl is elligible for a particular boy'
-		flag = 1
-		if(self.bugdet < girl.main_budget):
+		flag = True
+		if(self.budget < girl.main_budget):
 
-			flag = 0
-			print(self.name + " will not date " + girl.name)
+			flag = False
+			#print(self.name + " will not date " + girl.name)
 
 		if(self.attr_requirement > girl.attr_rating):
 
-			flag = 0
-			print(girl.name + 'does not meet attractiveness requirement for' + self.name)
+			flag = False
+			#print(girl.name + ' does not meet attractiveness requirement for ' + self.name)
+
+		if(self.status == 'c'):
+
+			flag = False
+			#print(self.name + ' is already commited')
 
 		return flag
 
