@@ -3,6 +3,7 @@ from boy import Boy
 from gift import Gift
 from random import randint
 from generate import generator
+from logger import logger
 import csv
 
 def calGift(girl,boy,gift):
@@ -59,9 +60,11 @@ for g in  G:
 			print("GirlFriend : " + g.name + ", BoyFriend : " + b.name)
 			g.changeStatus()
 			b.changeStatus()
+			logger(' commitment : ' + g.name + " and " + b.name)
 			setattr(b,b.gfname,g.name)
 			setattr(g,g.bfname,b.name)
 			giftlist = calGift(g,b,gift)
+			logger(' gifting : ' + b.name + ' ----->> ' + g.name + ' ' + ' '.join([i.name for i in giftlist]))
 			calGirlHappiness(g,giftlist)
 			calBoyHappiness(b,g,giftlist)
 			coupleCompat = b.budget- g.main_budget + abs(b.attr_rating - g.attr_rating) + abs(g.intel_level - b.intel_level)
@@ -80,7 +83,7 @@ for c in C[0:k] :
 	print 'GF : ' + c[1].name + ' BF : ' + c[0].name + ' compatibility ' + str(c[4])
 print '------------------------------------------'
 for c in C:
-	print c[1].name + " Gifted " + c[0].name + " ---->>>>"
+	print c[0].name + " Gifted " + c[1].name + " ---->>>>"
 	for g in c[2]:
 		print g.name + ' ',
 	print '\n***********\n'
