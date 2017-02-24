@@ -1,7 +1,9 @@
 from girl import Girl
 from boy import Boy
+from generate import generator
 import csv
 
+generator()
 boycsv = open('boy.csv')
 girlcsv = open('girl.csv')
 readBoy = csv.reader(boycsv, delimiter = ',')
