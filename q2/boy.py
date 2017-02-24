@@ -98,7 +98,7 @@ class Boy:
 		
 		if( s < self.budget):
 			for i in gift:
-				if (i.types == 'Luxury') and ((self.budget - s) >= i.price):
+				if (i.types == 'Luxury') and ((self.budget - s) >= i.price) and (i not in g):
 					s += i.price
 					g += [i]
 					break
