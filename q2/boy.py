@@ -53,4 +53,55 @@ class Boy:
 			self.status = 'c'
 		else :
 			self.status = 's'
-			
+	
+	def giftMiser(self,girl,gift):
+	
+		s = 0
+		g = []
+		for i in gift:
+			if(s < girl.main_budget):
+				s += i.price
+				g += [i]
+			else:
+				break
+		self.budget = max(self.budget,s)
+		return g		
+
+	def giftGenerous(self,girl,gift):
+		
+		s = 0
+		g = []
+		flag = False
+		for i in gift:
+				if(s + i.price <= self.budget):
+					s += i.price
+					g += [i]
+					flag = True
+				else:
+					break
+		if(not flag):
+			self.budget = gift[0].price
+			g = g + [gift[0]]
+		return g
+	
+	def giftGeeks(self,girl,gift):
+
+		s = 0
+		g = []
+		for i in gift:
+			if(s < girl.main_budget):
+				s += i.price
+				g += [i]
+			else:
+				break
+		self.budget = max(self.budget,s)
+		
+		if( s < self.budget):
+			for i in gift:
+				if (i.types == 'Luxury') and ((self.budget - s) >= i.price):
+					s += i.price
+					g += [i]
+					break
+
+		return g
+

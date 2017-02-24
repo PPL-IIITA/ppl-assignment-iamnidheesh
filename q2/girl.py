@@ -1,3 +1,5 @@
+from math import log,exp
+
 class Girl:
 	
 	'defines a girl'
@@ -37,7 +39,6 @@ class Girl:
 	def checkStatus(self):
 
 		'check status of a girl'
-
 		return self.status
 
 	def changeStatus(self):
@@ -48,3 +49,21 @@ class Girl:
 			self.status = 'c'
 		else :
 			self.status = 's'
+
+	def happinessChoosy(self,gift):
+
+		s_gift = sum([i.price+2*i.value if (i.types == 'Luxury') else i.price+i.value
+				 for i in gift]) 
+		if(s_gift > self.main_budget):
+			self.happiness = log(s_gift - self.main_budget)
+		else:
+			self.happiness = 0
+
+	def happinessNormal(self,gift):
+
+		self.happiness = max(0,sum([(i.price + i.value) 
+						for i in gift]) - self.main_budget) 
+
+	def happinessDesperate(self,gift):
+
+		self.happiness = max(0,int(exp(sum([i.price for i in gift]))) - self.main_budget)
