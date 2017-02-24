@@ -4,7 +4,7 @@ class Girl:
 	
 	girl_number = 0
 
-	def __init__(self,name,attr_rating,main_budget,intel_level):
+	def __init__(self,name,attr_rating,main_budget,intel_level,types):
 
 		'intialises attributes'
 		self.name = name
@@ -13,6 +13,9 @@ class Girl:
 		self.intel_level = intel_level
 		self.status = 's'
 		self.bfname = ''
+		self.happiness = 0
+		self.types = types
+
 
 	def isElligible(self,boy):
 

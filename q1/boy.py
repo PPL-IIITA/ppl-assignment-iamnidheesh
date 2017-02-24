@@ -4,7 +4,7 @@ class Boy:
 
 	boy_number = 0
 
-	def __init__(self,name,attr_rating,budget,intel_level,attr_requirement):
+	def __init__(self,name,attr_rating,budget,intel_level,attr_requirement,types):
 
 		'initialises attributes'
 
@@ -15,6 +15,8 @@ class Boy:
 		self.attr_requirement = attr_requirement
 		self.status = 's'
 		self.gfname = ''
+		self.happiness = 0
+		self.types = types
 
 	def isElligible(self,girl):
 
