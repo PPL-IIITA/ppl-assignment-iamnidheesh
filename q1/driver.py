@@ -2,6 +2,7 @@ from girl import Girl
 from boy import Boy
 from generate import generator
 import csv
+from logger import logger
 
 generator()
 boycsv = open('boy.csv')
@@ -13,12 +14,12 @@ G = [ Girl(row[0],int(row[1]),int(row[2]),int(row[3]),row[4]) for row in readGir
 for g in  G:
 	for b in  B:
 		
-		#print ("Trying  match :" + g.name + " with " + b.name)
 		if(g.isElligible(b) and b.isElligible(g)):
 
 			print("GirlFriend : " + g.name + ", BoyFriend : " + b.name)
 			g.changeStatus()
 			b.changeStatus()
+			logger(' commitment : ' + g.name + " and " + b.name)
 			setattr(g,g.bfname,b.name)
 			setattr(b,b.gfname,g.name)
 			break
