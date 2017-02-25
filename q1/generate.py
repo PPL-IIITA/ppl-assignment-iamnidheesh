@@ -2,12 +2,17 @@ from random import randint
 import csv
 
 def writeToCsv(Data,filename):
+	' writes to a csv file'
+	
 	csv_file = open(filename,'wb')
 	Writer = csv.writer(csv_file, delimiter=',') 
 	for line in Data:
 		Writer.writerow(line)
 
 def generator():
+
+	'generates random data to be written to csv file'
+	
 	tb = ['Miser','Generous','Geeks']
 	tg = ['Choosy','Normal','Desperate']
 	gift = ['Essential','Luxury','Utiltiy']
