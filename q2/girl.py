@@ -52,6 +52,7 @@ class Girl:
 
 	def happinessChoosy(self,gift):
 
+		"calculate happiness for a choosy girl"
 		s_gift = sum([i.price+2*i.value if (i.types == 'Luxury') else i.price+i.value
 				 for i in gift]) 
 		if(s_gift > self.main_budget):
@@ -61,9 +62,11 @@ class Girl:
 
 	def happinessNormal(self,gift):
 
+		"calculate happiness for a normal girl"
 		self.happiness = max(0,sum([(i.price + i.value) 
 						for i in gift]) - self.main_budget) 
 
 	def happinessDesperate(self,gift):
 
+		"calculate happiness for a desperate girl"
 		self.happiness = max(0,int(exp(sum([i.price for i in gift]))) - self.main_budget)

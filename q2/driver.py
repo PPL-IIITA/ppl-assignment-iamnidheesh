@@ -8,6 +8,7 @@ import csv
 
 def calGift(girl,boy,gift):
 
+	'returns gift list for a particular couple'
 	gift = sorted(gift,key = lambda x : x.price)
 	g = []
 	if(boy.types == 'Miser'):
@@ -20,6 +21,7 @@ def calGift(girl,boy,gift):
 
 def calGirlHappiness(girl,gift):
 
+	"calculates girl's hapiness"
 	if(girl.types == 'Choosy'):
 		girl.happinessChoosy(gift)
 	if(girl.types == 'Normal'):
@@ -29,6 +31,7 @@ def calGirlHappiness(girl,gift):
 
 def calBoyHappiness(girl,boy,gift) :
 
+	"calculate boy's happiness"
 	if(boy.types == 'Miser'):
 		setattr(boy,boy.happiness,boy.budget - sum([i.price for i in gift]))
 	if(boy.types == 'Generous'):

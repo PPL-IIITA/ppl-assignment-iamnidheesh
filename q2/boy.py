@@ -55,7 +55,8 @@ class Boy:
 			self.status = 's'
 	
 	def giftMiser(self,girl,gift):
-	
+		
+		"calculates returns gifts that a miser boy will give"
 		s = 0
 		g = []
 		for i in gift:
@@ -69,6 +70,7 @@ class Boy:
 
 	def giftGenerous(self,girl,gift):
 		
+		"calculates returns gifts that a generous boy will give"
 		s = 0
 		g = []
 		flag = False
@@ -86,6 +88,7 @@ class Boy:
 	
 	def giftGeeks(self,girl,gift):
 
+		"calculates returns gifts that a geek boy will give"
 		s = 0
 		g = []
 		for i in gift:
