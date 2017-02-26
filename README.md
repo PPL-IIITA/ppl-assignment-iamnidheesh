@@ -18,5 +18,5 @@ q2/class_diagram_2.pdf (question 2)
 
 #Tools used
 python 2.7.12 for code.</br>
-epydoc and latex for document generation.</br>
+epydoc and latex for documentation.</br>
 pyreverse for class diagram
