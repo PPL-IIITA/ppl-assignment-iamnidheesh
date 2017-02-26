@@ -15,3 +15,8 @@ q2/DOC2.pdf (question 2).
 #Class Diagram
 q1/class_diagram_1.pdf (question 1) </br>
 q2/class_diagram_2.pdf (question 2)
+
+#Tools used
+python 2.7.12 for code.</br>
+epydoc and latex for document generation.</br>
+pyreverse for class diagram
