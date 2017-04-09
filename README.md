@@ -40,8 +40,10 @@ $ python driver.py
 >epydoc and latex for documentation (question 1 & 2). </br>
 >epydoc for documentation (question 3 to 8). </br>
 >pyreverse for class diagram.
+>dot for converting dot files to pdf.
+>pdfunite for merging pdf.
 
-## important installation
+## important installations
 >> ### install pylint for pyreverse. </br>
 > $ sudo apt-get update </br>
 $sudo apt-get install pylint </br>
