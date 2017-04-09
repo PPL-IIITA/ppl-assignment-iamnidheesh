@@ -49,5 +49,5 @@ $sudo apt-get install pylint </br>
 > $ sudo apt-get install python-epydoc. </br>
 ## generate documentaion and class diagram. </br>
 >> given in how_to_build.txt </br>
-## run code.<\br>
+## run code. </br>
 >> given in how_to_execute.txt </br>
