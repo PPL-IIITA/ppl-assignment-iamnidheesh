@@ -1,18 +1,14 @@
 class Gift :
 
 	'defines a gift'
-	name = ''
-	"""@ivar: name of gift"""
-	price = 0
-	"""@ivar: price of gift"""
-	value = 0
-	"""@ivar: value of gift"""
-	types = ''
-	"""@ivar: type of gift."""
 	def __init__(self,name,price,value,types):
 		'initialises attributes of Gift class'
 		self.name = name
+		"""@ivar: name of gift"""
 		self.price = price
+		"""@ivar: price of gift"""
 		self.value = value
+		"""@ivar: value of gift"""
 		self.types = types
+		"""@ivar: type of gift."""
 

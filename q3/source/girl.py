@@ -1,35 +1,26 @@
 class Girl:
 	
 	'defines a girl'
-	
-	name = ''
-	"""@ivar: name of girl"""
-	attr_rating = 0
-	"""@ivar: attractiveness rating."""
-	main_budget = 0
-	"""@ivar: maintainence budget."""
-	intel_level = 0
-	"""@ivar: intelligence level"""
-	types = ''
-	"""@ivar: type of girl."""
-	status = ''
-	"""@ivar: status of girl (single or committed."""
-	bfname = ''
-	"""@ivar: boyfriend name."""
-	happiness = 0
-	"""@ivar: happiness of girl"""
 
 	def __init__(self,name,attr_rating,main_budget,intel_level,types):
 
 		'intialises attributes'
 		self.name = name
+		"""@ivar: name of girl"""
 		self.attr_rating = attr_rating
+		"""@ivar: attractiveness rating."""
 		self.main_budget = main_budget
+		"""@ivar: maintainence budget."""
 		self.intel_level = intel_level
+		"""@ivar: intelligence level"""
 		self.status = 's'
+		"""@ivar: status of girl (single or committed."""
 		self.bfname = ''
+		"""@ivar: boyfriend name."""
 		self.happiness = 0
+		"""@ivar: happiness of girl"""
 		self.types = types
+		"""@ivar: type of girl."""
 
 
 	def isElligible(self,boy):
