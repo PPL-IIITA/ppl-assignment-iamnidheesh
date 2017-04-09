@@ -39,9 +39,9 @@ $ python driver.py
 >python 2.7.12 for code.</br>
 >epydoc and latex for documentation (question 1 & 2). </br>
 >epydoc for documentation (question 3 to 8). </br>
->pyreverse for class diagram.
->dot for converting dot files to pdf.
->pdfunite for merging pdf.
+>pyreverse for class diagram.</br>
+>dot for converting dot files to pdf.</br>
+>pdfunite for merging pdf.</br>
 
 ## important installations
 >> ### install pylint for pyreverse. </br>
