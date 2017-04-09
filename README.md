@@ -36,12 +36,12 @@ $ python driver.py
 >>q8/class_diagram/class_diagram.pdf (question 8) </br>
 
 ## Tools used
->python 2.7.12 for code.</br>
->epydoc and latex for documentation (question 1 & 2). </br>
->epydoc for documentation (question 3 to 8). </br>
->pyreverse for class diagram.</br>
->dot for converting dot files to pdf.</br>
->pdfunite for merging pdf.</br>
+>1. python 2.7.12 for code.</br>
+>2. epydoc and latex for documentation (question 1 & 2). </br>
+>3. epydoc for documentation (question 3 to 8). </br>
+>4. pyreverse for class diagram.</br>
+>5. dot for converting dot files to pdf.</br>
+>6. pdfunite for merging pdf.</br>
 
 ## important installations
 >> ### install pylint for pyreverse. </br>
